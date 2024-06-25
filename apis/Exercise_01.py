@@ -13,4 +13,14 @@ Print out:
 
 '''
 
-#ddd
+import requests
+
+req = requests.get("http://demo.codingnomads.co:8080/tasks_api/users")
+
+status_code = req.status_code
+encoding = req.encoding
+text_body = req.content
+
+print(status_code)
+print(encoding)
+print(text_body)
